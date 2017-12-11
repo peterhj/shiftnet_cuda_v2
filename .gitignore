@@ -1,2 +1,4 @@
 build
 shiftnet_cuda
+__init__.py
+
