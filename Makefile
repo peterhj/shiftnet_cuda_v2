@@ -1,7 +1,13 @@
 # Unix commands.
 PYTHON := python
 NVCC := /usr/local/cuda-8.0/bin/nvcc
-NVCC_COMPILE := $(NVCC) -gencode arch=compute_52,code=sm_52 -gencode arch=compute_60,code=sm_60 -gencode arch=compute_61,code=sm_61 -c -o
+NVCC_COMPILE := $(NVCC) -arch=sm_30 \
+ -gencode=arch=compute_30,code=sm_30 \
+ -gencode=arch=compute_50,code=sm_50 \
+ -gencode=arch=compute_52,code=sm_52 \
+ -gencode=arch=compute_60,code=sm_60 \
+ -gencode=arch=compute_61,code=sm_61 \
+ -gencode=arch=compute_61,code=compute_61 -c -o
 RM_RF := rm -rf
 
 # Library compilation rules.
