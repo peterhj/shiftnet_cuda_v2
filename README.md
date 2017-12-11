@@ -53,3 +53,36 @@ make
 > **Getting `invalid_device_function`?** Update the architecture code in [`models/shiftnet_cuda_v2/Makefile`](https://github.com/alvinwan/shiftresnet-cifar/blob/master/models/shiftnet_cuda_v2/Makefile#L4), currently configured for a Titan X. e.g., A Tesla K80 is `sm-30`.
 
 Your custom CUDA layer is now installed.
+
+# Test
+
+To check that the build completed successfully, run the test script
+
+```
+python test_shiftnet.py
+```
+
+After ~3s, the script should output a number of different tensors, where the last tensor has non-zero values only in the first column.
+
+```
+Columns 13 to 17
+   89     0     0     0     0
+  107     0     0     0     0
+  125     0     0     0     0
+  143     0     0     0     0
+  161     0     0     0     0
+  179     0     0     0     0
+  197     0     0     0     0
+  215     0     0     0     0
+  233     0     0     0     0
+  251     0     0     0     0
+  269     0     0     0     0
+  287     0     0     0     0
+  305     0     0     0     0
+  323     0     0     0     0
+    0     0     0     0     0
+    0     0     0     0     0
+    0     0     0     0     0
+    0     0     0     0     0
+[torch.FloatTensor of size 18x18]
+```
