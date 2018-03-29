@@ -1,6 +1,18 @@
 # Shift Operation CUDA Implementation
 
-created by Peter Jin . readme written by [Alvin Wan](http://alvinwan.com)
+created by Peter Jin
+
+Tradeoffs and further analysis can be found in the paper. If you find this work useful for your research, please consider citing:
+
+    @inproceedings{shift,
+        Author = {Bichen Wu and Alvin Wan and Xiangyu Yue and Peter Jin and Sicheng Zhao and Noah Golmant and Amir Gholaminejad and Joseph Gonzalez and Kurt Keutzer},
+        Title = {Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions},
+        Journal = {arXiv:1711.08141},
+        Year = {2017}
+    }
+
+Uses of Shift:
+* [ShiftResNet](http://github.com/alvinwan/shiftresnet-cifar) for CIFAR-10, CIFAR-100 classification
 
 # Installation
 
